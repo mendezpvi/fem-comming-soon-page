@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base Apparel</title>
+
+  <link rel="icon" href="./assets/icons/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+  <main class="main">
+    <header class="header container">
+      <img src="./assets/images/logo.svg" alt="Base Apparel" class="logo">
+    </header>
+
+    <div class="hero">
+      <picture>
+        <source media="(min-width: 850px)" srcset="./assets/images/hero_desktop.webp">
+        <img src="./assets/images/hero_mobile.webp" alt="A young lady posing, smiling at the camera." class="hero-pic">
+      </picture>
+    </div>
+
+    <section class="body container">
+      <h1 class="body-title">We're <strong class="accent">coming soon</strong></h1>
+      <p class="body-description">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+      <form action="#" class="subscription-form" autocomplete="off">
+          <div class="box">
+            <div class="input-field">
+              <input type="email" name="email" id="email" placeholder="Email Address" class="email-input">
+              <img src="./assets/icons/icon-error.svg" alt="" aria-hidden="true" class="icon icon-hint">
+            </div>
+            <button type="submit" class="submit-btn" aria-label="Subscribe to stay up-to-date with announcements and our launch deals.">
+              <img src="./assets/icons/icon-arrow.svg" alt="" class="icon">
+            </button>
+          </div>
+          <p class="hint">Please provide a valid email</p>
+      </form>
+    </section>
+
+    <footer class="attribution">
+      <small>Challenge by <a href="https://www.frontendmentor.io/challenges" target="_blank" rel="noreferrer" class="attribution-cta">Frontend Mentor</a> - Coded by <a href="https://github.com/mendezpvi/fem-comming-soon-page" target="_blank" rel="noreferrer" class="attribution-cta">VIMP</a> </small>
+    </footer>
+  </main>
+
+
+
+  <script type="module" src="./js/index.js"></script>
+</body>
+</html>
