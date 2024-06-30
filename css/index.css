@@ -136,6 +136,7 @@ body {
   display: none;/**/
   margin-top: .6rem;
   font-size: .88rem;
+  color: var(--soft-red);
 }
 
 .attribution {
