@@ -1,0 +1,241 @@
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body, h1, p {
+  margin: 0;
+}
+img {
+  max-inline-size: 100%;
+  block-size: 100%;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+body {
+  font-family: var(--ff-josefin), sans-serif;
+}
+
+:root {
+  --ff-josefin: 'Josefin';
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%);
+  --dark-grayish-red: hsl(0, 6%, 24%);
+  --light-grayish-red: hsl(357, 50%, 92%);
+  --grad-body: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --grad-button: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+.main {
+  min-block-size: 100vh;
+  min-block-size: 100svh;
+  display: grid;
+  align-content: start;
+  align-items: end;
+  background: var(--grad-body);
+}
+.container{
+  inline-size: 82vw;
+  max-inline-size: 25rem;
+  margin-inline: auto;
+}
+.header {
+  padding-block: 1.95rem;
+}
+.logo {
+  inline-size: clamp(6.21rem, 26.5vw, 9.9rem);
+}
+.body {
+  padding-top: 4.05rem;
+  font-size: clamp(.88rem, .6rem + 1.18vw, 1rem);
+  text-align: center;
+  color: var(--desaturated-red);
+}
+.body-title,
+.body-description {
+  margin-inline: auto;
+}
+.body-title {
+  max-inline-size: 10ch;
+  font-size: clamp(2.5rem, 1.5rem + 4.2vw, 4rem);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 1.1rem;
+  line-height: 1.08;
+}
+.accent {
+  font-weight: 600;
+  color: var(--dark-grayish-red);
+}
+.body-description {
+  max-inline-size: 45ch;
+  margin-top: 1rem;
+  line-height: 1.57;
+}
+
+.subscription-form {
+  margin-top: 2rem;
+  block-size: 5.1rem;
+}
+.box {
+  block-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid hsl(from var(--dark-grayish-red) h s l / .2);
+  border-radius: 3rem;
+}
+.input-field {
+  inline-size: 100%;
+  position: relative;
+}
+.email-input {
+  padding-left: 1.2rem;
+  padding-right: 2rem;
+  inline-size: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 3rem;
+  text-transform: lowercase;
+  border: none;
+  background-color: transparent;
+  border-radius: 3rem 0 0 3rem;
+  color: var(--desaturated-red);
+  outline: none;
+}
+.email-input::placeholder {
+  text-transform: capitalize;
+  color: var(--desaturated-red);
+  opacity: .8;
+}
+.icon-hint {
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  display: none;/**/
+  position: absolute;
+  right: .6rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.submit-btn {
+  padding: 0;
+  margin-right: -.2rem;
+  inline-size: 3.9rem;
+  line-height: 3rem;
+  background: var(--grad-button);
+  border: none;
+  border-radius: 3rem;
+  box-shadow: 0 .5rem .5rem hsl(from var(--soft-red) h s l / .15), 0 1rem .5rem hsl(from var(--soft-red) h s l / .08);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hint {
+  display: none;/**/
+  margin-top: .6rem;
+  font-size: .88rem;
+}
+
+.attribution {
+  padding-block: 1rem;
+  font-size: .85rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--desaturated-red);
+}
+.attribution-cta {
+  margin-inline: .25rem;
+  color: var(--dark-grayish-red);
+  text-decoration-thickness: .15rem;
+  text-underline-offset: .15rem;
+}
+
+
+
+@media (width >= 850px) {
+  .main {
+    grid-template-columns: repeat(2, 1fr);
+    align-content: stretch;
+    background: url('../assets/images/bg-pattern-desktop.svg') no-repeat top left;
+    background-size: contain;
+  }
+  .hero {
+    grid-column: 2/-1;
+    grid-row: 1/4;
+    block-size: 100%;
+  }
+  .hero-pic {
+    object-fit: cover;
+  }
+}
+@media (width >= 1024px) {
+  .main {
+    grid-template-columns: 57.65% 1fr;
+    align-items: center;
+  }
+  .container {
+    margin-left: 5rem;
+    max-inline-size: 27.7rem;
+  }
+  .header {
+    padding-block: unset;
+  }
+  .body {
+    padding-top: unset;
+    text-align: left;
+  }
+  .body-title,
+  .body-description {
+    margin-inline: unset;
+  }
+  .body-description {
+    margin-top: 1.17rem;
+    line-height: 1.75;
+  }
+  .subscription-form {
+    margin-top: 2.5rem;
+  }
+  .hint {
+    margin-left: 1.2rem;
+  }
+  .attribution {
+    padding-block: unset;
+  }
+
+}
+@media (width >= 85.375rem) {
+  .container {
+    margin-left: 10.3rem;
+  }
+  .header {
+    padding-block: 1.5rem;
+  }
+  .body {
+    padding-top: 1.75rem;
+  }
+  .box {
+    block-size: 3.5rem;
+  }
+  .email-input {
+    padding-left: 1.95rem;
+  }
+  .hint {
+    margin-left: 1.95rem;
+  }
+  .submit-btn {
+    line-height: 3.5rem;
+    inline-size: 8rem;
+  }
+}
+
+*:focus-visible {
+  outline-offset: .25rem;
+  outline: .15rem dotted var(--desaturated-red);
+}
+
+.attribution-cta:focus-visible,
+.attribution-cta:hover {
+  text-decoration: none;
+}
