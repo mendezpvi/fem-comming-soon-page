@@ -45,6 +45,8 @@ Users should be able to:
 
 [Live site URL](https://mendezpvi.github.io/fem-comming-soon-page/) 👀
 
+[Solution in Frontend Mentor](https://www.frontendmentor.io/solutions/base-apparel-coming-soon-page-KaXwsB5c9n) 👀
+
 [Challenges overcome](https://github.com/mendezpvi/frontend-mentor-challenges) 👀
 
 ## *Built with* :hammer_and_pick:
